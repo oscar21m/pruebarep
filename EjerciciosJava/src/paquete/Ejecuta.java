@@ -97,6 +97,29 @@ public class Ejecuta {
 				p4.Fibonacci(Integer.parseInt(sc.nextLine()));
 				break;
 				
+			case 17:
+				System.out.println("Factura de productos comprados");
+				p4.Factura(sc);
+				break;
+				
+			case 18:
+				int num1, num2, num3;
+				System.out.println("Debes introducir 3 números, después serán ordenados de forma descendente");
+				
+				System.out.println("Introduce el primer número");
+				num1 = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Introduce el segundo número");
+				num2 = Integer.parseInt(sc.nextLine());
+				
+				System.out.println("Introduce el tercer número");
+				num3 = Integer.parseInt(sc.nextLine());
+				
+				p4.Ordenar(num1, num2, num3);
+				break;
+				
+			default:
+				System.out.println("Número inválido");
 			}
 			
 			System.out.println("¿Qué método quieres ejecutar? Del 1 al 18, pulsa 0 para acabar.");
