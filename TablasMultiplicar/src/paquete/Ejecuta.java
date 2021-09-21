@@ -14,6 +14,8 @@ public class Ejecuta {
 		}
 		
 		System.out.println("Prueba de segundo push");
+		
+		System.out.println("Hola");
 
 	}
 
