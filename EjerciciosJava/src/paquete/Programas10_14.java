@@ -85,7 +85,7 @@ public class Programas10_14 {
 	public void Primos1al100() {
 		System.out.println("Estos son los números primos del 1 al 100:");
 		boolean primo = true;
-		for(int i = 1; i <= 100; i++) {
+		for(int i = 2; i <= 100; i++) {
 			primo = true;
 			for(int j = 2; j < i && primo; j ++) {
 				if(i%j == 0) {

@@ -8,6 +8,8 @@ public class Programas5_9 {
 		boolean primo = true;
 		String mensaje;
 		
+		if (num<2) {primo = false;}
+		
 		for(int i = 2; i < num && primo; i ++) {
 			if(num%i == 0) {
 				primo = false;
