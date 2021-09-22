@@ -127,6 +127,8 @@ public class Ejecuta {
 			
 		} while(opcion!=0);
 		sc.close();
+		
+		System.out.println("jejeje");
 	}
 
 }
