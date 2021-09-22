@@ -118,7 +118,7 @@ public class Ejecuta {
 				p4.Ordenar(num1, num2, num3);
 				break;
 				
-			default:
+			default: 
 				System.out.println("Número inválido");
 			}
 			

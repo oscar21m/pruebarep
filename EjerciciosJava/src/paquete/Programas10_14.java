@@ -1,4 +1,5 @@
 package paquete;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Programas10_14 {
@@ -26,8 +27,9 @@ public class Programas10_14 {
 		 año de nacimiento*/
 	public void Alumnos(Scanner sc) {
 		String nombre, nombremenor = "";
-		int año = 0, menor = Integer.MAX_VALUE, edad = 0, suma = 0, cont = 0;
-		double media;
+		int ano = 0, menor = Integer.MAX_VALUE, edad = 0, suma = 0, cont = 0;
+		float media;
+		int year = Calendar.getInstance().get(Calendar.YEAR);
 		
 		do {
 			System.out.println("Escribe el nombre del alumno, escribe fin si no quieres escribir más");
@@ -35,19 +37,19 @@ public class Programas10_14 {
 			
 			if(!nombre.equalsIgnoreCase("fin")) {
 				System.out.println("Escribe su año de nacimiento");
-				año = Integer.parseInt(sc.nextLine());
-				edad = 2021 - año;
+				ano = Integer.parseInt(sc.nextLine());
+				edad = year - ano;
 				if(edad < menor) {
 					menor = edad;
 					nombremenor = nombre;
 				}
 				suma += edad;
 				cont++;
-			}
+			} 
 
 		}while(!nombre.equalsIgnoreCase("fin"));
 		
-		media = suma/cont;
+		media = (float)suma/cont;
 		System.out.println("La media de edades de los alumnos es de " + media + "\nEl alumno más pequeño es " + nombremenor + " y tiene " + menor + " años");
 	}
 	
