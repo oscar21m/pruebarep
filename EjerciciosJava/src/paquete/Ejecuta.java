@@ -11,9 +11,10 @@ public class Ejecuta {
 		Programas10_14 p3 = new Programas10_14();
 		Programas15_18 p4 = new Programas15_18();
 		
-		System.out.println("¿Qué método quieres ejecutar?, del 1 al 18, pulsa 0 para acabar.");
-		opcion = Integer.parseInt(sc.nextLine());
 		do{
+			
+			System.out.println("¿Qué quieres ejecutar? Del 1 al 18, pulsa 0 para acabar.");
+			opcion = Integer.parseInt(sc.nextLine());
 			switch(opcion) {
 			case 0: break;
 			
@@ -120,9 +121,6 @@ public class Ejecuta {
 			default: 
 				System.out.println("Número inv�lido");
 			}
-			
-			System.out.println("¿Qué quieres ejecutar? Del 1 al 18, pulsa 0 para acabar.");
-			opcion = Integer.parseInt(sc.nextLine());
 			
 		} while(opcion!=0);
 		sc.close();
