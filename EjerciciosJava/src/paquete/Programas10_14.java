@@ -39,6 +39,7 @@ public class Programas10_14 {
 				System.out.println("Escribe su año de nacimiento");
 				ano = Integer.parseInt(sc.nextLine());
 				edad = year - ano;
+				
 				if(edad < menor) {
 					menor = edad;
 					nombremenor = nombre;
@@ -49,8 +50,33 @@ public class Programas10_14 {
 
 		}while(!nombre.equalsIgnoreCase("fin"));
 		
-		media = (float)suma/cont;
-		System.out.println("La media de edades de los alumnos es de " + media + "\nEl alumno más pequeño es " + nombremenor + " y tiene " + menor + " años");
+		//FORMA CON WHILE (mejor):
+		
+		System.out.println("Escribe el nombre del alumno, escribe fin si no quieres escribir más");
+		nombre = sc.nextLine();
+		
+		while(!nombre.equalsIgnoreCase("fin")){
+			
+			System.out.println("Escribe su año de nacimiento");
+			ano = Integer.parseInt(sc.nextLine());
+			edad = year - ano;
+			
+			if(edad < menor) {
+				menor = edad;
+				nombremenor = nombre;
+			}
+			suma += edad;
+			cont++;
+			
+			System.out.println("Escribe el nombre del alumno, escribe fin si no quieres escribir más");
+			nombre = sc.nextLine();
+		}
+		
+		if(cont > 0) {
+			media = (float)suma/cont;
+			System.out.println("La media de edades de los alumnos es de " + media + "\nEl alumno más pequeño es " + nombremenor + " y tiene " + menor + " años");
+		}
+		
 	}
 	
 	/*12.Programa que muestra los números primos existentes entre el 1 y el 100. NOTA: Un
