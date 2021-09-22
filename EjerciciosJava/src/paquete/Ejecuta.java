@@ -11,10 +11,12 @@ public class Ejecuta {
 		Programas10_14 p3 = new Programas10_14();
 		Programas15_18 p4 = new Programas15_18();
 		
-		System.out.println("¿Qué metodo quieres ejecutar? Del 1 al 18, pulsa 0 para acabar.");
+		System.out.println("Â¿QuÃ© mÃ©todo quieres ejecutar?, del 1 al 18, pulsa 0 para acabar.");
 		opcion = Integer.parseInt(sc.nextLine());
 		do{
 			switch(opcion) {
+			case 0: break;
+			
 			case 1:
 				System.out.println("Introduce el nÃºmero A");
 				int a = Integer.parseInt(sc.nextLine());
@@ -29,26 +31,23 @@ public class Ejecuta {
 				break;
 				
 			case 3:
-				System.out.println("Introduce números hasta que escribas dos iguales seguidos");
+				System.out.println("Introduce nÃºmeros hasta que escribas dos iguales seguidos");
 				p1.DosIguales(sc);
 				break;
 				
 			case 4:
-				System.out.println("Introduce un número, de el se mostraran todos los divisores");
+				System.out.println("Introduce un nÃºmero, de el se mostraran todos los divisores");
 				p1.TodosDivisores(Integer.parseInt(sc.nextLine()));
 				break;
 				
 			case 5:
-				System.out.println("Introduce un número para comprobar si es primo");
-				if(p2.esPrimo(sc.nextInt())) {
-					System.out.println("El número es primo");
-				}else {
-					System.out.println("El número no es primo");
-				}
+				System.out.println("Introduce un nÃºmero para comprobar si es primo");
+				int num = Integer.parseInt(sc.nextLine());
+				p2.esPrimo(num);
 				break;
 			
 			case 6:
-				System.out.println("Introduce 9 números, si el primero y el último son iguales se hará la media");
+				System.out.println("Introduce 9 nÃºmeros, si el primero y el Ãºltimo son iguales se harÃ¡ la media");
 				p2.MediaQuizas(sc);
 				break;
 			
@@ -57,21 +56,21 @@ public class Ejecuta {
 				break;
 			
 			case 8:
-				System.out.println("Deberas introducir 10 números, luego se mostrara el más grande y cuántas veces se ha repetido");
+				System.out.println("Deberas introducir 10 nÃºmeros, luego se mostrara el mÃ¡s grande y cuÃ¡ntas veces se ha repetido");
 				p2.MaxYRepeticiones(sc);
 				break;
 				
 			case 9:
-				System.out.println("El jugador1 escribirá un número del 1 al 100 y el jugador2 intentará adivinarlo, tiene 10 intentos");
+				System.out.println("El jugador1 escribirÃ¡ un nÃºmero del 1 al 100 y el jugador2 intentarÃ¡ adivinarlo, tiene 10 intentos");
 				p2.JuegoMayorMenor(sc);
 				break;
 			
 			case 10:
-				System.out.println("Introduce 5 números, se comprobaran si todos son iguales o no");
+				System.out.println("Introduce 5 nÃºmeros, se comprobaran si todos son iguales o no");
 				if(p3.SonIguales(sc)) {
-					System.out.println("Todos los números son iguales");
+					System.out.println("Todos los nÃºmeros son iguales");
 				}else {
-					System.out.println("Los números son diferentes");
+					System.out.println("Los nÃºmeros son diferentes");
 				}
 				break;
 				
@@ -88,12 +87,12 @@ public class Ejecuta {
 				break;
 				
 			case 15:
-				System.out.println("Introduce un número para hacer la suma de todos los divisores menos del mismo.");
+				System.out.println("Introduce un nÃºmero para hacer la suma de todos los divisores menos del mismo.");
 				p4.SumaDivisores(Integer.parseInt(sc.nextLine()));
 				break;
 				
 			case 16:
-				System.out.println("Introduce un número hasta el que mostrar la seria de fibonacci");
+				System.out.println("Introduce un nÃºmero hasta el que mostrar la seria de fibonacci");
 				p4.Fibonacci(Integer.parseInt(sc.nextLine()));
 				break;
 				
@@ -104,25 +103,25 @@ public class Ejecuta {
 				
 			case 18:
 				int num1, num2, num3;
-				System.out.println("Debes introducir 3 números, después serán ordenados de forma descendente");
+				System.out.println("Debes introducir 3 nÃºmeros, despuï¿½s serÃ¡n ordenados de forma descendente");
 				
-				System.out.println("Introduce el primer número");
+				System.out.println("Introduce el primer nÃºmero");
 				num1 = Integer.parseInt(sc.nextLine());
 				
-				System.out.println("Introduce el segundo número");
+				System.out.println("Introduce el segundo nÃºmero");
 				num2 = Integer.parseInt(sc.nextLine());
 				
-				System.out.println("Introduce el tercer número");
+				System.out.println("Introduce el tercer nÃºmero");
 				num3 = Integer.parseInt(sc.nextLine());
 				
 				p4.Ordenar(num1, num2, num3);
 				break;
 				
 			default: 
-				System.out.println("Número inválido");
+				System.out.println("NÃºmero invï¿½lido");
 			}
 			
-			System.out.println("¿Qué quieres ejecutar? Del 1 al 18, pulsa 0 para acabar.");
+			System.out.println("Â¿QuÃ© quieres ejecutar? Del 1 al 18, pulsa 0 para acabar.");
 			opcion = Integer.parseInt(sc.nextLine());
 			
 		} while(opcion!=0);

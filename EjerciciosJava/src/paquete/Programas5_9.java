@@ -3,46 +3,49 @@ import java.util.Scanner;
 
 public class Programas5_9 {
 	
-	//5. Programa que nos informa si un número introducido es primo o no.
-	public boolean esPrimo(int num) {
+	//5. Programa que nos informa si un nÃºmero introducido es primo o no.
+	public void esPrimo(int num) {
 		boolean primo = true;
+		String mensaje;
 		
-		for(int i = 2; i < num; i ++) {
+		for(int i = 2; i < num && primo; i ++) {
 			if(num%i == 0) {
 				primo = false;
 			}
 		}
-		return primo;
+		
+		mensaje = (primo)?"Es primo":"No es primo";
+		System.out.println(mensaje);
 	}
 	
-	/*6.Programa que lee 9 números, y en el caso en el que el primero introducido sea igual al
-		último, nos muestra la media. En caso contrario, no se mostrará nada.
+	/*6.Programa que lee 9 nÃºmero, y en el caso en el que el primero introducido sea igual al
+		Ãºltimo, nos muestra la media. En caso contrario, no se mostrarÃ¡ nada.
 	*/
 	public void MediaQuizas(Scanner sc) {
 		int primero = 0, ult = 0, suma=0;
 		double media;
 		
-		System.out.println("Introduce un nuevo número");
+		System.out.println("Introduce un nuevo nÃºmero");
 		primero = Integer.parseInt(sc.nextLine());
 		
 		for(int i = 0; i<=8; i ++) {
-			System.out.println("Introduce un nuevo número");
+			System.out.println("Introduce un nuevo nÃºmero");
 			suma += Integer.parseInt(sc.nextLine());
 		}
 		
-		System.out.println("Introduce un nuevo número");
+		System.out.println("Introduce un nuevo nÃºmero");
 		ult = Integer.parseInt(sc.nextLine());
 		
 		if(primero == ult) {
 			media = suma/9;
-			System.out.println("La media de los números es de " + media);
+			System.out.println("La media de los nÃºmeros es de " + media);
 		} else {
-			System.out.println("El primer y último número no son iguales por lo tanto no se hace la media");
+			System.out.println("El primer y ï¿½ltimo nÃºmero no son iguales por lo tanto no se hace la media");
 		}
 	}
 	
-	/*7.Programa que pide el número de calificaciones a introducir, y una nota de corte. A
-		continuación se introducirán las calificaciones, para finalmente indicar cuántas
+	/*7.Programa que pide el nÃºmero de calificaciones a introducir, y una nota de corte. A
+		continuaciÃ³n se introducirÃ¡n las calificaciones, para finalmente indicar cuÃ¡ntas
 		calificaciones han igualado o superado la nota de corte.
 	 */
 	public void Calificaciones(Scanner sc) {
@@ -51,7 +54,7 @@ public class Programas5_9 {
 		
 		System.out.println("Introduce una nota de corte");
 		corte = Float.parseFloat(sc.nextLine());
-		System.out.println("¿Cuántas notas vas a introducir?");
+		System.out.println("Â¿CuÃ¡ntas notas vas a introducir?");
 		numnotas = Integer.parseInt(sc.nextLine());
 		
 		for(int i = 0; i<numnotas; i++) {
@@ -65,12 +68,12 @@ public class Programas5_9 {
 		System.out.println(contsuperada + " calificaciones han superado la nota de corte.");
 	}
 	
-	//8. Programa que lee 10 números. Al finalizar mostrará el máximo introducido, y cuántas veces se repite dicho máximo.
+	//8. Programa que lee 10 nÃºmeros. Al finalizar mostrarÃ¡ el mÃ¡ximo introducido, y cuÃ¡ntas veces se repite dicho mÃ¡ximo.
 	public void MaxYRepeticiones(Scanner sc) {
 		int mayor = Integer.MIN_VALUE, num, contmax = 0;
 		//sin arrays:
 		for (int i = 0; i < 10; i ++) {
-			System.out.println("Introduce un nuevo número");
+			System.out.println("Introduce un nuevo nÃºmero");
 			num = Integer.parseInt(sc.nextLine());
 			if (num > mayor) {
 				mayor = num;
@@ -84,7 +87,7 @@ public class Programas5_9 {
 		int arrnumeros[];
 		arrnumeros = new int[10];
 		for (int i = 0; i < 10; i ++) {
-			System.out.println("Introduce un nuevo número");
+			System.out.println("Introduce un nuevo nï¿½mero");
 			num = Integer.parseInt(sc.nextLine());
 			arrnumeros[i] = num;
 			if (num > mayor) {
@@ -97,33 +100,33 @@ public class Programas5_9 {
 				contmax+=1;
 			}
 		}*/
-		System.out.println("El número mayor es el " + mayor + " y se ha repetido " + contmax + " veces");
+		System.out.println("El nÃºmero mayor es el " + mayor + " y se ha repetido " + contmax + " veces");
 	}
 	
-	/*9.Programa consistente en un juego en el que el Jugador1 introduce un número entre el 1 y
-		el 100 y el Jugador2 tendrá que adivinarlo en un máximo de 10 intentos. Por cada intento
-		del Jugador2, y en el caso de no acertar, se mostrará el mensaje “Te pasaste”, o “No
-		llegaste”, según corresponda. De la misma manera, y al terminar el programa, se
-		mostrarán los mensajes “Acertaste” o bien “Intentos agotados”.
+	/*9.Programa consistente en un juego en el que el Jugador1 introduce un nÃºmero entre el 1 y
+		el 100 y el Jugador2 tendrÃ¡ que adivinarlo en un mÃ¡ximo de 10 intentos. Por cada intento
+		del Jugador2, y en el caso de no acertar, se mostrarÃ¡ el mensaje "Te pasaste", o "No
+		llegaste", segÃºn corresponda. De la misma manera, y al terminar el programa, se
+		mostrarÃ¡n los mensajes "Acertaste" o bien "Intentos agotados".
 	 */
 	public void JuegoMayorMenor(Scanner sc) {
 		int x, intentos = 10, num;
 		boolean ganar = false;
 		
 		do {
-			System.out.println("Introduce el número a adivinar, del 1 al 100");
+			System.out.println("Introduce el nÃºmero a adivinar, del 1 al 100");
 			x = Integer.parseInt(sc.nextLine());
 		}while(x<1 || x > 100);
 		
 		for(int i = 0; i < intentos; i ++) {
-			System.out.println("Introduce que número crees que han introducido");
+			System.out.println("Introduce que nÃºmero crees que han introducido");
 			num = Integer.parseInt(sc.nextLine());
 			if (num > x) {
 				System.out.println("Te has pasado :(");
 			} else if(num < x) {
 				System.out.println("No has llegado :(");
 			} else {
-				System.out.println("Es el número correcto! :D");
+				System.out.println("Es el nÃºmero correcto! :D");
 				i = 10;
 				ganar = true;
 			}

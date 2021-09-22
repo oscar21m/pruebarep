@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Programas1_4 {
 	
-	//1. Programa que lee dos números A y B, y nos informa si B es divisor de A o no.
+	//1. Programa que lee dos nÃºmeros A y B, y nos informa si B es divisor de A o no.
 	public void divisor (int a, int b) {
 		int resultado = a%b;
 		if (resultado == 0) {
@@ -15,18 +15,18 @@ public class Programas1_4 {
 	}
 	
 	/*
-	  2.Programa que lee 11 números comprendidos entre el 20 y 40, ambos inclusive. En el caso
-		en el que algún número introducido no se encontrara dentro del rango permitido, se
-		mostrará un mensaje de error y seguirá pidiendo números. El programa finalizará cuando
-		se hayan introducido 11 números válidos y mostrará el número máximo introducido de los
-		11 válidos. Además indicará cuántos números de los introducidos no han sido válidos.
+	  2.Programa que lee 11 nÃºmeros comprendidos entre el 20 y 40, ambos inclusive. En el caso
+		en el que algÃºn nÃºmero introducido no se encontrara dentro del rango permitido, se
+		mostrarÃ¡ un mensaje de error y seguirÃ¡ pidiendo nÃºmero. El programa finalizarÃ¡ cuando
+		se hayan introducido 11 nÃºmeros vÃ¡lidos y mostrarï¿½ el nÃºmero mÃ¡ximo introducido de los
+		11 vÃ¡lidos. AdemÃ¡s indicarÃ¡ cuÃ¡ntos nÃºmeros de los introducidos no han sido vÃ¡lidos.
 	*/
 	public void Nums20al40 (Scanner sc) {
 		int num;
 		int mayor = 0;
 		int novalidos = 0;
 		for(int i = 0; i<=10;) {
-			System.out.println("Introduce un nuevo número");
+			System.out.println("Introduce un nuevo nÃºmero");
 			num = Integer.parseInt(sc.nextLine());
 			if(num>=20 && num<=40) {
 				if(num > mayor) {
@@ -34,24 +34,24 @@ public class Programas1_4 {
 				}
 				i++;
 			} else {
-				System.out.println("El número introducido es incorrecto");
+				System.out.println("El nÃºmero introducido es incorrecto");
 				novalidos++;
 			}
 		}
 		
-		System.out.println("El número máximo introducido es " + mayor);
-		System.out.println("Has escrito " + novalidos + " números incorrectos.");
+		System.out.println("El nÃºmero mÃ¡ximo introducido es " + mayor);
+		System.out.println("Has escrito " + novalidos + " nÃºmeros incorrectos.");
 	}
 	
-	 //3. Programa que lee de manera consecutiva números hasta que se introducen dos números iguales seguidos.
+	 //3. Programa que lee de manera consecutiva nÃºmeros hasta que se introducen dos nÃºmeros iguales seguidos.
 	
 	public void DosIguales(Scanner sc) {
 		int num1, aux;
 		boolean continuar = true;
-		System.out.println("Introduce un número");
+		System.out.println("Introduce un nÃºmero");
 		aux = Integer.parseInt(sc.nextLine());
 		do {
-			System.out.println("Introduce un número");
+			System.out.println("Introduce un nÃºmero");
 			num1 = Integer.parseInt(sc.nextLine());
 			
 			if (num1 == aux) {
@@ -59,10 +59,10 @@ public class Programas1_4 {
 			}
 			aux = num1;
 		} while(continuar);
-		System.out.println("Has introducido 2 números iguales");
+		System.out.println("Has introducido 2 nÃºmeros iguales");
 	}
 	
-	//4. Programa que muestra todos los divisores de un número introducido. Entre los divisores no se incluirá el propio número.
+	//4. Programa que muestra todos los divisores de un nÃºmero introducido. Entre los divisores no se incluirÃ¡ el propio nÃºmero.
 	
 	public void TodosDivisores(int num) {
 		for(int i = 1; i<=num - 1; i ++) {

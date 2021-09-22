@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Programas10_14 {
 	
-	//10. Programa que lee 5 n�meros e indica si todos los n�meros son iguales o no.
+	//10. Programa que lee 5 números e indica si todos los números son iguales o no.
 	public boolean SonIguales(Scanner sc) {
 		int num, aux;
 		boolean iguales = true;
@@ -21,17 +21,18 @@ public class Programas10_14 {
 		return iguales;
 	}
 	
-	/*11.Programa que lee nombre y a�o de nacimiento de una serie de alumnos hasta introducir
-		 como nombre de alumno �fin�. En ese momento mostrar� la edad media de los alumnos y
+	/*11.Programa que lee nombre y año de nacimiento de una serie de alumnos hasta introducir
+		 como nombre de alumno "fin". En ese momento mostrará la edad media de los alumnos y
 		 el nombre del alumno menor. NOTA: Al introducir como nombre �fin�, no nos ha de pedir el
-		 a�o de nacimiento*/
+		 año de nacimiento*/
 	public void Alumnos(Scanner sc) {
 		String nombre, nombremenor = "";
 		int ano = 0, menor = Integer.MAX_VALUE, edad = 0, suma = 0, cont = 0;
 		float media;
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		
-		do {
+		/*Forma con do while:
+		 do {
 			System.out.println("Escribe el nombre del alumno, escribe fin si no quieres escribir más");
 			nombre = sc.nextLine();
 			
@@ -48,7 +49,7 @@ public class Programas10_14 {
 				cont++;
 			} 
 
-		}while(!nombre.equalsIgnoreCase("fin"));
+		}while(!nombre.equalsIgnoreCase("fin"));*/
 		
 		//FORMA CON WHILE (mejor):
 		
@@ -79,14 +80,14 @@ public class Programas10_14 {
 		
 	}
 	
-	/*12.Programa que muestra los n�meros primos existentes entre el 1 y el 100. NOTA: Un
-		 n�mero es primo si tiene dos �nicos divisores que son el 1 y �l mismo.*/
+	/*12.Programa que muestra los números primos existentes entre el 1 y el 100. NOTA: Un
+		número es primo si tiene dos �nicos divisores que son el 1 y él mismo.*/
 	public void Primos1al100() {
 		System.out.println("Estos son los números primos del 1 al 100:");
 		boolean primo = true;
 		for(int i = 1; i <= 100; i++) {
 			primo = true;
-			for(int j = 2; j < i; j ++) {
+			for(int j = 2; j < i && primo; j ++) {
 				if(i%j == 0) {
 					primo = false;
 				}
@@ -97,8 +98,8 @@ public class Programas10_14 {
 		}
 	}
 	
-	/*14.Programa que lee una secuencia de 10 n�meros y muestra el mayor de los m�ltiplos de 5,
-		 y el menor de los m�ltiplos de 3. Si no hubiera ning�n m�ltiplo, el programa lo indicar�a.*/
+	/*14.Programa que lee una secuencia de 10 números y muestra el mayor de los múltiplos de 5,
+		 y el menor de los múltiplos de 3. Si no hubiera ningún múltiplo, el programa lo indicaría.*/
 
 	public void SecuenciaMult(Scanner sc) {
 		int num = 0, mayor = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;

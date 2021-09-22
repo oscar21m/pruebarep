@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Programas15_18 {
 	
-	/*15.Programa que lee un número y muestra la suma de sus divisores, sin incluir el propio
-		 número entre sus divisores*/
+	/*15.Programa que lee un nÃºmero y muestra la suma de sus divisores, sin incluir el propio
+		 nÃºmero entre sus divisores*/
 	
 	public void SumaDivisores(int num) {
 		int suma = 0;
@@ -17,9 +17,9 @@ public class Programas15_18 {
 		System.out.println("La suma es " + suma);
 	}
 	
-	/*16.Programa que genera los N primeros números de la serie de Fibonacci. El valor N deberá
-		 ser leído por el teclado. NOTA: Los dos primeros números son 1, y el resto se obtiene
-		 sumando los dos anteriores: 1,1,2,3,5,8,13,21…*/
+	/*16.Programa que genera los N primeros nï¿½meros de la serie de Fibonacci. El valor N deberÃ¡
+		 ser leÃ­do por el teclado. NOTA: Los dos primeros nÃºmeros son 1, y el resto se obtiene
+		 sumando los dos anteriores: 1,1,2,3,5,8,13,21ï¿½*/
 	
 	public void Fibonacci(int num) {
 		int aux1 = 0, aux2=0, suma = 1;
@@ -33,7 +33,7 @@ public class Programas15_18 {
 	}
 	
 	/*17.Programa que lee cantidades y precios de productos, para al final indicar el total de la 
-		 factura. Si el importe supera los 1000€ se aplicará un descuento del 5%. El programa 
+		 factura. Si el importe supera los 1000â‚¬ se aplicarï¿½ un descuento del 5%. El programa 
 		 finaliza al introducir una cantidad 0.*/
 	
 	public void Factura(Scanner sc) {
@@ -53,19 +53,19 @@ public class Programas15_18 {
 				
 				if(resultado > 1000) {
 					resultado -= (resultado * 0.05);
-					System.out.println("Como el importe ha superado los 1000€ se le ha aplicado un descuento del 5%");
+					System.out.println("Como el importe ha superado los 1000â‚¬ se le ha aplicado un descuento del 5%");
 				}
 				
-				System.out.println("IMPORTE DEL PRODUCTO: " + resultado + "€");
+				System.out.println("IMPORTE DEL PRODUCTO: " + resultado + "ï¿½");
 				suma += resultado;
 			}
 			
 		}while(cant!=0);
 		
-		System.out.println("IMPORTE TOTAL: " + suma + "€");
+		System.out.println("IMPORTE TOTAL: " + suma + "ï¿½");
 	}
 	
-	/*18. Programa que lee 3 números y los muestra ordenados de manera descendente*/
+	/*18. Programa que lee 3 nÃºmeros y los muestra ordenados de manera descendente*/
 	public void Ordenar(int num1, int num2, int num3) {
 		int aux;
 		if(num1 < num2) {
