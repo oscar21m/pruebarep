@@ -8,6 +8,8 @@ public class Ejecuta {
 		int opcion = 1;
 		
 		Programas19_23 p1 = new Programas19_23();
+		Programas24_27 p2 = new Programas24_27();
+		Programas28_31 p3 = new Programas28_31();
 		
 		do {
 			System.out.println("¿Qué método quieres ejecutar?, del 19 al 31, pulsa 0 para acabar.");
@@ -39,6 +41,38 @@ public class Ejecuta {
 				p1.QuitarDuplicados(sc);
 				break;
 				
+			case 24:
+				System.out.println("Iras introduciendo números que después se mostrarán de forma ascendiente");
+				p2.OrdenAscendente(sc);
+				break;
+			
+			case 25:
+				p2.TablaBidimensional(sc);
+				break;
+			
+			case 26:
+				p2.CuadradoMagico();
+				break;
+				
+			case 27:
+				p2.MenorColumna(sc);
+				break;
+				
+			case 28:
+				p3.CargarTabla();
+				break;
+				
+			case 29:
+				p3.numsAleatorios();
+				break;
+				
+			case 30:
+				p3.FrecuenciaNums(sc);
+				break;
+				
+			case 31:
+				p3.MenuOPcionesArray();
+				break;
 			}
 			
 		}while(opcion != 0);
